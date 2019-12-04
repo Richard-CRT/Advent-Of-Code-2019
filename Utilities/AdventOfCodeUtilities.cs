@@ -50,9 +50,9 @@ namespace AdventOfCodeUtilities
 #endif
         }
 
-        static public List<string> GetInput()
+        static public List<string> GetInput(string filename= "input.txt")
         {
-            var inputFile = File.ReadAllLines("../../input.txt");
+            var inputFile = File.ReadAllLines("../../" + filename);
             return new List<string>(inputFile);
         }
     }
