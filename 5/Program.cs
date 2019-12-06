@@ -36,6 +36,7 @@ namespace _5
         public AddInstruction(Opcode _opcode, List<Parameter> _parameters) : base(_opcode, _parameters)
         {
             this.Length = 4;
+            this.Parameters = new List<Parameter>();
         }
 
         public override void Execute(int[] memory)
