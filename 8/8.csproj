@@ -4,9 +4,9 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E82F320B-7829-417D-91F4-B559E8EB55C6}</ProjectGuid>
+    <ProjectGuid>{6776A6DB-BCDC-494E-8CA8-467AD9B10D97}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_7</RootNamespace>
+    <RootNamespace>_8</RootNamespace>
     <AssemblyName>9</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IntCodeComputer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
