@@ -14,7 +14,7 @@ namespace _5
         public ParameterMode Mode;
         public int Value;
 
-        public int EvaluateParameter(string[] memory)
+        public int EvaluateParameter(int[] memory)
         {
             int evaluation = 0;
 
@@ -24,7 +24,7 @@ namespace _5
                     evaluation = this.Value;
                     break;
                 case ParameterMode.Position:
-                    evaluation = Int32.Parse(memory[this.Value]);
+                    evaluation = memory[this.Value];
                     break;
             }
 
@@ -37,7 +37,7 @@ namespace _5
         public int Length;
         public List<Parameter> Parameters = new List<Parameter>();
 
-        public abstract bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, string[] memory);
+        public abstract bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, int[] memory);
     }
 
     public class AddInstruction : Instruction
@@ -47,14 +47,14 @@ namespace _5
             this.Length = 4;
         }
 
-        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, string[] memory)
+        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, int[] memory)
         {
             if (this.Parameters[2].Mode == ParameterMode.Immediate)
                 throw new ArgumentException("Parameters that an instruction writes to will never be in immediate mode.");
             int a = this.Parameters[0].EvaluateParameter(memory);
             int b = this.Parameters[1].EvaluateParameter(memory);
             int dest = this.Parameters[2].Value;
-            memory[dest] = (a + b).ToString();
+            memory[dest] = a + b;
             return true;
         }
     }
@@ -66,14 +66,14 @@ namespace _5
             this.Length = 4;
         }
 
-        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, string[] memory)
+        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, int[] memory)
         {
             if (this.Parameters[2].Mode == ParameterMode.Immediate)
                 throw new ArgumentException("Parameters that an instruction writes to will never be in immediate mode.");
             int a = this.Parameters[0].EvaluateParameter(memory);
             int b = this.Parameters[1].EvaluateParameter(memory);
             int dest = this.Parameters[2].Value;
-            memory[dest] = (a * b).ToString();
+            memory[dest] = a * b;
             return true;
         }
     }
@@ -85,14 +85,14 @@ namespace _5
             this.Length = 2;
         }
 
-        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, string[] memory)
+        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, int[] memory)
         {
             if (this.Parameters[0].Mode == ParameterMode.Immediate)
                 throw new ArgumentException("Parameters that an instruction writes to will never be in immediate mode.");
             Console.Write("Input: ");
             string input = Console.ReadLine();
             int dest = this.Parameters[0].Value;
-            memory[dest] = input;
+            memory[dest] = Int32.Parse(input);
             return true;
         }
     }
@@ -104,7 +104,7 @@ namespace _5
             this.Length = 2;
         }
 
-        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, string[] memory)
+        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, int[] memory)
         {
             int a = this.Parameters[0].Value;
             Console.WriteLine("Output: {0}", memory[a]);
@@ -119,7 +119,7 @@ namespace _5
             this.Length = 3;
         }
 
-        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, string[] memory)
+        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, int[] memory)
         {
             int a = this.Parameters[0].EvaluateParameter(memory);
             if (a != 0)
@@ -139,7 +139,7 @@ namespace _5
             this.Length = 3;
         }
 
-        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, string[] memory)
+        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, int[] memory)
         {
             int a = this.Parameters[0].EvaluateParameter(memory);
             if (a == 0)
@@ -160,7 +160,7 @@ namespace _5
             this.Parameters = new List<Parameter>();
         }
 
-        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, string[] memory)
+        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, int[] memory)
         {
             if (this.Parameters[2].Mode == ParameterMode.Immediate)
                 throw new ArgumentException("Parameters that an instruction writes to will never be in immediate mode.");
@@ -168,9 +168,9 @@ namespace _5
             int b = this.Parameters[1].EvaluateParameter(memory);
             int dest = this.Parameters[2].Value;
             if (a < b)
-                memory[dest] = "1";
+                memory[dest] = 1;
             else
-                memory[dest] = "0";
+                memory[dest] = 0;
             return true;
         }
     }
@@ -182,7 +182,7 @@ namespace _5
             this.Length = 4;
         }
 
-        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, string[] memory)
+        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, int[] memory)
         {
             if (this.Parameters[2].Mode == ParameterMode.Immediate)
                 throw new ArgumentException("Parameters that an instruction writes to will never be in immediate mode.");
@@ -190,9 +190,9 @@ namespace _5
             int b = this.Parameters[1].EvaluateParameter(memory);
             int dest = this.Parameters[2].Value;
             if (a == b)
-                memory[dest] = "1";
+                memory[dest] = 1;
             else
-                memory[dest] = "0";
+                memory[dest] = 0;
             return true;
         }
     }
@@ -204,7 +204,7 @@ namespace _5
             this.Length = 1;
         }
 
-        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, string[] memory)
+        public override bool Execute(ref int instructionPointer, ref bool instructionPointerChanged, int[] memory)
         {
             return false;
         }
@@ -217,7 +217,12 @@ namespace _5
         {
             List<string> inputList = AoCUtilities.GetInput();
             string program = inputList[0];
-            string[] memory = program.Split(',');
+            string[] data = program.Split(',');
+            int[] memory = new int[data.Length];
+            for (int i = 0; i < data.Length; i++)
+            {
+                memory[i] = Int32.Parse(data[i]);
+            }
 
             for (int instructionPointer = 0; instructionPointer < memory.Length;)
             {
@@ -264,7 +269,7 @@ namespace _5
                 for (int i = 1; i < instruction.Length; i++)
                 {
                     Parameter parameter = new Parameter();
-                    parameter.Value = Int32.Parse(memory[instructionPointer + i]);
+                    parameter.Value = memory[instructionPointer + i];
                     switch (complexOpcodeString[instruction.Length - (1 + i)])
                     {
                         case '0':
