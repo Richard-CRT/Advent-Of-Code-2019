@@ -55,7 +55,7 @@ namespace IntCodeComputerNS
                         currentState.Memory[this.Value + currentState.RelativeBase] = data;
                         break;
                     case ParameterMode.Immediate:
-                        throw new ArgumentException("Parameters that an instruction writes to will never be in immediate mode.");
+                        throw new ArgumentException("'Parameters that an instruction writes to will never be in immediate mode.'");
                 }
             }
         }
