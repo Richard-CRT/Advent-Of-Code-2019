@@ -211,7 +211,7 @@ namespace _12
 
                 if (xMatches)
                 {
-                    Console.WriteLine("Step {0}: all moons are in their start X state", stepIndex);
+                    AoCUtilities.DebugWriteLine("Step {0}: all moons are in their start X state", stepIndex);
                     if (xRepeats == -1 && stepIndex != 0)
                     {
                         xRepeats = stepIndex;
@@ -219,7 +219,7 @@ namespace _12
                 }
                 if (yMatches)
                 {
-                    Console.WriteLine("Step {0}: all moons are in their start Y state", stepIndex);
+                    AoCUtilities.DebugWriteLine("Step {0}: all moons are in their start Y state", stepIndex);
                     if (yRepeats == -1 && stepIndex != 0)
                     {
                         yRepeats = stepIndex;
@@ -227,7 +227,7 @@ namespace _12
                 }
                 if (zMatches)
                 {
-                    Console.WriteLine("Step {0}: all moons are in their start Z state", stepIndex);
+                    AoCUtilities.DebugWriteLine("Step {0}: all moons are in their start Z state", stepIndex);
                     if (zRepeats == -1 && stepIndex != 0)
                     {
                         zRepeats = stepIndex;
