@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using AdventOfCodeUtilities;
 using IntCodeComputerNS;
@@ -126,6 +127,7 @@ namespace _13
             
             AoCUtilities.DebugClear();
             AoCUtilities.DebugWriteLine(print);
+            Thread.Sleep(100);
 #endif
 
             //AoCUtilities.DebugReadLine();
