@@ -47,7 +47,7 @@ namespace _3
                 }
             }
 
-            Console.WriteLine(lowestCount);
+            Console.WriteLine("Fewest combined steps the wires must take: {0}",lowestCount);
             Console.ReadLine();
         }
 
