@@ -70,7 +70,7 @@ namespace _13
                     PrintGrid();
 
                     Console.WriteLine("Maze Explored!");
-                    Console.ReadLine();
+                    //Console.ReadLine();
 
                     bool mapOxygenated = false;
                     int minutes = 0;
