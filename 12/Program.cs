@@ -254,7 +254,7 @@ namespace _12
                 stepIndex++;
             }
 
-            Console.WriteLine("Total Energy of all Moons: {0}", totalEnergyOfAllMoons);
+            Console.WriteLine("Total Energy of all Moons is {0} after {1} steps", totalEnergyOfAllMoons, stepIndex);
             Console.WriteLine("X Axis Repeats Every {0} Steps", xRepeats);
             Console.WriteLine("Y Axis Repeats Every {0} Steps", yRepeats);
             Console.WriteLine("Z Axis Repeats Every {0} Steps", zRepeats);
