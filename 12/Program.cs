@@ -258,6 +258,7 @@ namespace _12
             Console.WriteLine("X Axis Repeats Every {0} Steps", xRepeats);
             Console.WriteLine("Y Axis Repeats Every {0} Steps", yRepeats);
             Console.WriteLine("Z Axis Repeats Every {0} Steps", zRepeats);
+
             Int64 lcmXY = lcm(xRepeats, yRepeats);
             Int64 earliestStepWithAllRepeat = lcm(lcmXY, zRepeats);
             Console.WriteLine("Earliest Step With All Axes Repeated: {0}", earliestStepWithAllRepeat);
