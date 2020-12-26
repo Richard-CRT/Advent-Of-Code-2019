@@ -4,9 +4,9 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{65208485-CE44-4757-AFA3-7F37373400BA}</ProjectGuid>
+    <ProjectGuid>{B9CDB108-D778-4630-898B-91C5F476B685}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TemplateProject</RootNamespace>
+    <RootNamespace>Day_22___Slam_Shuffle</RootNamespace>
     <AssemblyName>aoc_day</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
