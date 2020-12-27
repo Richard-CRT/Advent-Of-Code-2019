@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 20 - Donut Maze", "Day 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 22 - Slam Shuffle", "Day 22 - Slam Shuffle\Day 22 - Slam Shuffle.csproj", "{B9CDB108-D778-4630-898B-91C5F476B685}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 24 - Planet of Discord", "Day 24 - Planet of Discord\Day 24 - Planet of Discord.csproj", "{76EA23F5-DD56-4473-8AC3-E900B7DAAA2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{B9CDB108-D778-4630-898B-91C5F476B685}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9CDB108-D778-4630-898B-91C5F476B685}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9CDB108-D778-4630-898B-91C5F476B685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76EA23F5-DD56-4473-8AC3-E900B7DAAA2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76EA23F5-DD56-4473-8AC3-E900B7DAAA2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76EA23F5-DD56-4473-8AC3-E900B7DAAA2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76EA23F5-DD56-4473-8AC3-E900B7DAAA2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
