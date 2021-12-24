@@ -42,6 +42,11 @@ namespace _12
                 return false;
             }
         }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 
     class Moon

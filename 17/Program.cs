@@ -34,6 +34,11 @@ namespace _13
             MovementAction otherMovementAction = obj as MovementAction;
             return this.Turn == otherMovementAction.Turn && this.Quantity == otherMovementAction.Quantity;
         }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 
     class Tile

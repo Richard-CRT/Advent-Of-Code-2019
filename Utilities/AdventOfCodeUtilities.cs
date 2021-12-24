@@ -55,5 +55,11 @@ namespace AdventOfCodeUtilities
             var inputFile = File.ReadAllLines("../../" + filename);
             return new List<string>(inputFile);
         }
+
+        static public List<string> GetInputLines(string filename = "input.txt")
+        {
+            var inputFile = File.ReadAllLines("../../" + filename);
+            return inputFile.ToList();
+        }
     }
 }

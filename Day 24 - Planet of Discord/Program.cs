@@ -151,6 +151,7 @@ namespace Day_24___Planet_of_Discord
 
         public RecursiveGridState Tick()
         {
+            /*
             TileType[][] newGrid = new TileType[5][];
             for (int y = 0; y < 5; y++)
             {
@@ -185,6 +186,8 @@ namespace Day_24___Planet_of_Discord
                 }
             }
             return new RecursiveGridState(newGrid);
+            */
+            return null;
         }
 
         public void Print()
