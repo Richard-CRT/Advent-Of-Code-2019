@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{359B15B1-E135-4274-A7F7-9CEE88CDA637}</ProjectGuid>
+    <ProjectGuid>{31912C9F-7B64-4345-9986-05809811A4D6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_18</RootNamespace>
-    <AssemblyName>9</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>Day_18___Many_Worlds_Interpretation</RootNamespace>
+    <AssemblyName>aoc_day</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
