@@ -49,6 +49,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 18 - Many-Worlds Interp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 19 - Tractor Beam", "Day 19 - Tractor Beam\Day 19 - Tractor Beam.csproj", "{BB5B52FA-3BD8-4662-873F-9B4B91A355B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 21 - Springdroid Adventure", "Day 21 - Springdroid Adventure\Day 21 - Springdroid Adventure.csproj", "{D3F5D1AF-FAE7-44D9-8B13-CFF7B9115F9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day 23 - Category Six", "Day 23 - Category Six\Day 23 - Category Six.csproj", "{4BAE9520-5AE2-4684-86D4-9A3DFC1AD3E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +151,14 @@ Global
 		{BB5B52FA-3BD8-4662-873F-9B4B91A355B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB5B52FA-3BD8-4662-873F-9B4B91A355B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB5B52FA-3BD8-4662-873F-9B4B91A355B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F5D1AF-FAE7-44D9-8B13-CFF7B9115F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F5D1AF-FAE7-44D9-8B13-CFF7B9115F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F5D1AF-FAE7-44D9-8B13-CFF7B9115F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F5D1AF-FAE7-44D9-8B13-CFF7B9115F9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BAE9520-5AE2-4684-86D4-9A3DFC1AD3E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BAE9520-5AE2-4684-86D4-9A3DFC1AD3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BAE9520-5AE2-4684-86D4-9A3DFC1AD3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BAE9520-5AE2-4684-86D4-9A3DFC1AD3E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
